@@ -56,7 +56,24 @@ a{
     display: flex;
     border-radius: 15px;
     margin: 100px;
-    width: 300px;
-    box-shadow: -2px 20px 99px -1px rgba(0,0,0,0.78);
-
+    width: 400px;
+    box-shadow: -2px 20px 99px -1px rgba(0, 0, 0, 0.78);
 }
+
+.buttons{
+   display: flex;
+   flex-direction: row;
+   gap: 20px;
+   height: 200px ;
+   display: grid;
+   grid-template-columns: 200px 200px;
+   border-radius: 20px;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
