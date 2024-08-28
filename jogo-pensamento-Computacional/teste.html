@@ -7,6 +7,51 @@
     <title>Document</title>
 </head>
 <body>
-    
-</body>
-</html>
+
+
+
+
+
+
+
+<!-- Tela de quizz -->
+<div id="quiz-screen">
+    <h2>Quizz</h2>
+    <p id="question">Pergunta 1: Qual é a capital do Brasil?</p>
+    <button id="answer1" class="answer-button">Brasília</button>
+    <button id="answer2" class="answer-button">Rio de Janeiro</button>
+    <button id="answer3" class="answer-button">São Paulo</button>
+    <div id="result"></div>
+  </div>
+  
+  <!-- JavaScript para verificar a resposta -->
+  <script>
+    const quizScreen = document.getElementById('quiz-screen');
+    const question = document.getElementById('question');
+    const resultDiv = document.getElementById('result');
+    const answerButtons = document.querySelectorAll('.answer-button');
+  
+    let correctAnswer = 'Brasília';
+  
+    answerButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        // Marca o botão como selecionado
+        button.classList.add('selected');
+        // Desmarca os outros botões
+        answerButtons.forEach((otherButton) => {
+          if (otherButton !== button) {
+            otherButton.classList.remove('selected');
+          }
+        });
+        // Verifica a resposta
+        const userAnswer = button.textContent;
+        if (userAnswer === correctAnswer) {
+          resultDiv.innerHTML = 'Parabéns! Você acertou!';
+          resultDiv.style.color = 'green';
+        } else {
+          resultDiv.innerHTML = 'Erro! A resposta certa é ' + correctAnswer;
+          resultDiv.style.color = 'red';
+        }
+      });
+    });
+  </script>
