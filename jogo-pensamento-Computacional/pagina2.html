@@ -17,8 +17,8 @@
    <nav class="nav-bar">
        <ul class="nav-list">
            <li><a href="./html-pastas/html.html">alimentos</a></li>
-           <li><a href="home">frutas</a></li>
-           <li><a href="home">animais</a></li>
+           <li><a href="teste.html">frutas</a></li>
+           <li><a href="index.html">animais</a></li>
            <li><a href="home">objetos</a></li>
            <li><a href="home">instrumentos</a></li>
            <li><a href="home">Ações</a></li>
@@ -48,27 +48,13 @@
             
         </div>
         
-
+           <div class="Confirmar">
+            <button class="ButtonConfirm">
+                Confirmar
+            </button>
+           </div>
         </main>
 
-        <script>
-            const quizScreen = document.getElementById('quiz-screen');
-            const question = document.getElementById('question');
-            const submitButton = document.getElementById('submit');
-            const resultDiv = document.getElementById('result');
-          
-            let correctAnswer = 'maça';
-          
-            submitButton.addEventListener('click', () => {
-              const userAnswer = document.querySelector('input[name="answer"]:checked').value;
-              if (userAnswer === correctAnswer) {
-                resultDiv.innerHTML = 'Parabéns! Você acertou!';
-                resultDiv.style.color = 'green';
-              } else {
-                resultDiv.innerHTML = 'Erro! A resposta certa é ' + correctAnswer;
-                resultDiv.style.color = 'red';
-              }
-            });
-          </script>
+     
 </body>
 </html>

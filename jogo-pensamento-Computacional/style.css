@@ -72,3 +72,11 @@ main{
     align-items: center;
 }
 
+.ButtonConfirm{
+  height: 100px;
+  width: 200px;
+
+}
+.Confirmar{
+    padding-right: 500px;
+}
